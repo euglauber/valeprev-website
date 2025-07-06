@@ -551,7 +551,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-200" />
-                  <span className="text-blue-100">contato@vale-previ.com.br</span>
+                  <span className="text-blue-100">contato@valeprev.com.br</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-blue-200" />
@@ -565,26 +565,41 @@ export default function HomePage() {
                 <CardTitle className="text-2xl text-gray-900">Entre em contato</CardTitle>
                 <CardDescription>Preencha o formulário e entraremos em contato</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="nome">Nome completo</Label>
-                  <Input id="nome" placeholder="Seu nome completo" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="telefone">Telefone/WhatsApp</Label>
-                  <Input id="telefone" placeholder="(11) 99999-9999" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">E-mail</Label>
-                  <Input id="email" type="email" placeholder="seu@email.com" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="caso">Descreva brevemente seu caso</Label>
-                  <Textarea id="caso" placeholder="Conte-nos sobre sua situação..." className="min-h-[100px]" />
-                </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
-                  Quero atendimento agora mesmo
-                </Button>
+              <CardContent>
+                <form
+                  action="https://formsubmit.co/glaubervinicius2018@gmail.com"
+                  method="POST"
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="/" />
+
+                  <div className="space-y-2">
+                    <Label htmlFor="nome">Nome completo</Label>
+                    <Input id="nome" name="Nome" required placeholder="Seu nome completo" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="telefone">Telefone/WhatsApp</Label>
+                    <Input id="telefone" name="Telefone" required placeholder="(11) 99999-9999" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">E-mail</Label>
+                    <Input id="email" type="email" name="Email" required placeholder="seu@email.com" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="mensagem">Descreva brevemente seu caso</Label>
+                    <Textarea
+                      id="mensagem"
+                      name="Mensagem"
+                      required
+                      placeholder="Conte-nos sobre sua situação..."
+                      className="min-h-[100px]"
+                    />
+                  </div>
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+                    Quero atendimento agora mesmo
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
@@ -677,5 +692,6 @@ export default function HomePage() {
         </a>
       </div>
     </div>
+
   )
 }
