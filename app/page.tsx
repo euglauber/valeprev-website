@@ -547,11 +547,11 @@ export default function HomePage() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-blue-200" />
-                  <span className="text-blue-100">(11) 99999-9999</span>
+                  <span className="text-blue-100">(12) 3199-9397</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-200" />
-                  <span className="text-blue-100">contato@valeprev.com.br</span>
+                  <span className="text-blue-100">contato@vale-previ.com.br</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-blue-200" />
