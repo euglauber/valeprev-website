@@ -534,7 +534,7 @@ export default function HomePage() {
       </section>
 
       {/* Formulário de Contato */}
-      <section id="contato" className="py-20 bg-blue-600">
+            <section id="contato" className="py-20 bg-blue-600">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
@@ -605,6 +605,24 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Scroll to top script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function () {
+              const form = document.querySelector('form[action^="https://formsubmit.co"]');
+              if (form) {
+                form.addEventListener('submit', function () {
+                  setTimeout(function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }, 1000);
+                });
+              }
+            });
+          `,
+        }}
+      />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
